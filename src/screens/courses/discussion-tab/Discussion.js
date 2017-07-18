@@ -6,8 +6,10 @@ class Discussion extends Component {
     render() {
         return (
             <View style={{flex:1}}>
-              <Header 
+               <Header 
                     notification={true}
+                    navigation={this.props.navigation}
+                    title={this.props.navigation.state.params.title}
                 />
                 <Text>Discussion Screen</Text>
             </View>

@@ -18,7 +18,7 @@ class Created extends Component {
             name={item.name}
             members={item.members}
             ownerName={item.ownerName}
-            navigation={() => { this.props.navigation.navigate('Courses', { courseId: item.id, title: item.name }) }}
+            navigation={() => { this.props.navigation.navigate('Courses', { courseId: item.id, title: item.name,lessonIds: item.lessonIds }) }}
         />
     )
     render() {
