@@ -18,165 +18,60 @@ import {
 	variables,
 } from "native-base";
 import styles from './styles';
-import drawerCover from  '../../../img/drawer-cover.png';
-import drawerImage from "../../../img/logo-kitchen-sink.png"
+import drawerCover from  '../../../img/logoMenu.png';
+import logoCompany from '../../../img/koolsoft.png';
+import drawerImage from "../../../img/hs1.jpg";
 
 const datas = [
 	{
-		name: "Anatomy",
-		route: "Anatomy",
-		icon: "phone-portrait",
-		bg: "#C5F442",
+		name: "Home",
+		route: "Home",
+		icon: "home"
 	},
 	{
-		name: "Actionsheet",
-		route: "Actionsheet",
-		icon: "easel",
-		bg: "#C5F442",
+		name: "Login",
+		route: "Login",
+		icon: "log-in",
 	},
 	{
-		name: "Header",
-		route: "Header",
-		icon: "phone-portrait",
+		name: "Profile",
+		route: "Profile",
+		icon: "contact",
 		bg: "#477EEA",
 		types: "8",
 	},
 	{
-		name: "Footer",
-		route: "Footer",
-		icon: "phone-portrait",
+		name: "FeedBack",
+		route: "FeedBack",
+		icon: "checkmark-circle",
 		bg: "#DA4437",
 		types: "4",
 	},
 	{
-		name: "Badge",
-		route: "NHBadge",
-		icon: "notifications",
+		name: "AboutUs",
+		route: "AboutUs",
+		icon: "information-circle",
 		bg: "#4DCAE0",
 	},
 	{
-		name: "Button",
-		route: "NHButton",
-		icon: "radio-button-off",
-		bg: "#1EBC7C",
-		types: "9",
-	},
-	{
-		name: "Card",
-		route: "NHCard",
-		icon: "keypad",
+		name: "Support",
+		route: "Support",
+		icon: "call",
 		bg: "#B89EF5",
 		types: "5",
 	},
 	{
-		name: "Check Box",
-		route: "NHCheckbox",
-		icon: "checkmark-circle",
-		bg: "#EB6B23",
+		name: "Setting",
+		route: "Setting",
+		icon: "settings",
+		
 	},
+	
 	{
-		name: "Deck Swiper",
-		route: "NHDeckSwiper",
-		icon: "swap",
-		bg: "#3591FA",
-	},
-	{
-		name: "Fab",
-		route: "NHFab",
-		icon: "help-buoy",
-		bg: "#EF6092",
-		types: "2",
-	},
-	{
-		name: "Form & Inputs",
-		route: "NHForm",
-		icon: "call",
-		bg: "#EFB406",
-		types: "12",
-	},
-	{
-		name: "Icon",
-		route: "NHIcon",
-		icon: "information-circle",
-		bg: "#EF6092",
-	},
-	{
-		name: "Layout",
-		route: "NHLayout",
-		icon: "grid",
-		bg: "#9F897C",
-		types: "5",
-	},
-	{
-		name: "List",
-		route: "NHList",
-		icon: "lock",
-		bg: "#5DCEE2",
-		types: "7",
-	},
-	{
-		name: "ListSwipe",
-		route: "ListSwipe",
-		icon: "swap",
-		bg: "#C5F442",
-		types: "2",
-	},
-	{
-		name: "Picker",
-		route: "NHPicker",
-		icon: "arrow-dropdown",
-		bg: "#F50C75",
-	},
-	{
-		name: "Radio",
-		route: "NHRadio",
-		icon: "radio-button-on",
-		bg: "#6FEA90",
-	},
-	{
-		name: "SearchBar",
-		route: "NHSearchbar",
-		icon: "search",
-		bg: "#29783B",
-	},
-	{
-		name: "Segment",
-		route: "Segment",
-		icon: "menu",
-		bg: "#AB6AED",
-	},
-	{
-		name: "Spinner",
-		route: "NHSpinner",
+		name: "Contact",
+		route: "Contact",
 		icon: "navigate",
-		bg: "#BE6F50",
-	},
-	{
-		name: "Tabs",
-		route: "NHTab",
-		icon: "home",
-		bg: "#AB6AED",
-		types: "2",
-	},
-	{
-		name: "Thumbnail",
-		route: "NHThumbnail",
-		icon: "image",
-		bg: "#cc0000",
-		types: "2",
-	},
-	{
-		name: "Toast",
-		route: "Toast",
-		icon: "albums",
-		bg: "#C5F442",
-	},
-	{
-		name: "Typography",
-		route: "NHTypography",
-		icon: "paper",
-		bg: "#48525D",
-	},
+	}
 ];
 
 class Menu extends Component {
@@ -193,6 +88,7 @@ class Menu extends Component {
 			<Container>
 				<Content bounces={false} style={{ flex: 1, backgroundColor: "#fff", top: -1 }}>
 					<Image source={drawerCover} style={styles.drawerCover}>
+						<Text> E-Learning Mobile</Text>
 						<Image square style={styles.drawerImage} source={drawerImage} />
 					</Image>
 					<List
@@ -220,6 +116,11 @@ class Menu extends Component {
 									</Right>}
 							</ListItem>}
 					/>
+						<Text >KoolSoft Company 2017</Text>
+						<Text>Version: 1.0.0</Text>
+					<Image source={logoCompany} style={styles.drawerCover}>
+					
+					</Image>
 				</Content>
 			</Container>
 		);
