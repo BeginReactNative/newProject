@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text } from 'react-native';
+import { View,Text, StatusBar } from 'react-native';
 import {Provider} from 'react-redux';
 import store from './redux/configureStore'
 import RootNav from './navigations/rootNav';
@@ -8,7 +8,10 @@ class Main extends Component {
     render() {
         return (
             <Provider store={store}>
+            <View style={{flex:1, marginTop: StatusBar.currentHeight}}>
                 <RootNav />
+            </View>
+                
             </Provider>
             
         );

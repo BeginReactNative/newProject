@@ -21,7 +21,7 @@ class Lesson extends Component {
                 />
     )
     render() {
-        console.log('Lesson Props', this.props)
+        //console.log('Lesson Props', this.props)
         return (
             <View style={{ flex: 1 }}>
                 <Header

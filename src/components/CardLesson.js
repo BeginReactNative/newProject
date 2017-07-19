@@ -15,7 +15,7 @@ class CardLesson extends Component {
         else {
             if(this.props.childrentType === 1) {
             this.props.getChildTopic(`http://api-dot-hola-edu.appspot.com/api?action=getTopics&ids=[${this.props.childrenIds}]`),
-            this.props.navigation.navigate('Coursesa',{ title:this.props.name })
+            this.props.navigation.navigate('ChildLesson',{ title:this.props.name, description: this.props.description  })
           
         }
         else{
@@ -26,7 +26,7 @@ class CardLesson extends Component {
         }
     }
     render() {
-       
+        //console.log('CardLesson' , this.props)
         return (
             <TouchableOpacity onPress={() => {this.checkChildType()}}>
             <View style={styles.container}>

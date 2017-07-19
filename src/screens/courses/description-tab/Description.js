@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text,WebView,Image,Dimensions } from 'react-native';
+import { View, Text,WebView,Image,Dimensions, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { fetchCourseById } from '../../../redux/actions/courseByID';
 import Header from '../../../components/header/Header';
@@ -23,6 +23,9 @@ class Description extends Component {
                 {
                     this.props.course.map((e,i) =>(
                         <View style={{flex:1}} key={i}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Authorized')}>
+                                <Text>AAA</Text>
+                            </TouchableOpacity>
                             <Image style={styles.drawerCover} source={{uri: e.avatar}} />
                             <Text style={{fontSize: 15, fontWeight: 'bold'}}>Created By: {e.ownerName}</Text>
                             <WebView style={{flex:1}} source={{html: e.description}} />
@@ -54,7 +57,6 @@ const { height } = Dimensions.get('window')
 const styles = {
     container: {
     flex:1,
-    padding: 10
     },
     drawerCover: {
         alignSelf: "stretch",
