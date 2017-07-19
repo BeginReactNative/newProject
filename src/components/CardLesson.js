@@ -20,7 +20,7 @@ class CardLesson extends Component {
           
         }
         else{
-           this.props.navigation.navigate('ExerciseSCR')
+           this.props.navigation.navigate('Exercise')
            this.props.getCards(`http://api-dot-hola-edu.appspot.com/api?action=getCards&ids=[${this.props.childrenIds}]`)
            
         }

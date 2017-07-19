@@ -9,6 +9,7 @@ import Discussion from '../screens/courses/discussion-tab/Discussion';
 import Documents from '../screens/courses/documents-tab/Documents';
 import Lesson from '../screens/courses/lesson-tab/Lesson';
 import ChildLesson from '../screens/courses/lesson-tab/child-lesson/ChildLesson';
+import Exercise from '../screens/courses/lesson-tab/exercise/Exercise';
 const rootNav = StackNavigator({
     UnAuthorized: {
         screen: UnAuth,
@@ -52,6 +53,12 @@ const rootNav = StackNavigator({
     },
     ChildLesson: {
         screen: ChildLesson,
+         navigationOptions: {
+            header: null
+        }
+    },
+     Exercise: {
+        screen: Exercise,
          navigationOptions: {
             header: null
         }
