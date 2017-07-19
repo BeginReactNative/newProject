@@ -10,6 +10,13 @@ import Documents from '../screens/courses/documents-tab/Documents';
 import Lesson from '../screens/courses/lesson-tab/Lesson';
 import ChildLesson from '../screens/courses/lesson-tab/child-lesson/ChildLesson';
 import Exercise from '../screens/courses/lesson-tab/exercise/Exercise';
+// Menu screen
+import AboutUs from '../screens/menu/about-us';
+import Profile from '../screens/menu/user-profile';
+import Feedback from '../screens/menu/feed-back';
+import Support from '../screens/menu/support';
+import Setting from '../screens/menu/settings';
+import Contact from '../screens/menu/contact';
 const rootNav = StackNavigator({
     UnAuthorized: {
         screen: UnAuth,
@@ -63,5 +70,41 @@ const rootNav = StackNavigator({
             header: null
         }
     },
+      AboutUs: {
+        screen: AboutUs,
+         navigationOptions: {
+            header: null
+        }
+    },
+    Profile: {
+        screen: Profile,
+         navigationOptions: {
+            header: null
+        }
+    },
+    Feedback: {
+        screen: Feedback,
+        navigationOptions: {
+            header: null
+        }
+    },
+    Support : {
+        screen: Support,
+        navigationOptions: {
+            header: null
+        }
+    },
+    Setting: {
+        screen: Setting,
+        navigationOptions: {
+            header: null
+        }
+    },
+    Contact: {
+        screen: Contact,
+        navigationOptions: {
+            header: null
+        }
+    }
 });
 export default rootNav;

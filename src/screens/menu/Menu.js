@@ -38,11 +38,11 @@ const datas = [
 		route: "Profile",
 		icon: "contact",
 		bg: "#477EEA",
-		types: "8",
+		
 	},
 	{
-		name: "FeedBack",
-		route: "FeedBack",
+		name: "Feedback",
+		route: "Feedback",
 		icon: "checkmark-circle",
 		bg: "#DA4437",
 		types: "4",
@@ -111,7 +111,7 @@ class Menu extends Component {
 												backgroundColor: data.bg,
 											}}
 										>
-											<Text style={styles.badgeText}>{`${data.types} Types`}</Text>
+											<Text style={styles.badgeText}>{`${data.types} New`}</Text>
 										</Badge>
 									</Right>}
 							</ListItem>}

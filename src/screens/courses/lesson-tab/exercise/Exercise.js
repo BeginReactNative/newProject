@@ -33,6 +33,7 @@ class Exercise extends Component {
                     menu={false}
                     search={false}
                     share={false}
+                    navigation={this.props.navigation}
                     notification={false}
                 />
             {
@@ -52,13 +53,12 @@ class Exercise extends Component {
                        this.state.arr.push(card.childIds)
                        
                     return(
-                        <View style={{ flex:1,borderWidth:1, borderRadius: 5,width: width}} key={i}>
-                        <Text>Cau {i +1 }</Text>
+                        <View style={{ flex:1, width: width}} key={i}>
                         <WebView style={styles.web} 
                             source={{html: card.frontText}}
                         >
                         </WebView>
-                       <View style={{height: 400}}>
+                       <View style={{height: 250}}>
                             <FlatList
                                     data={card.childCards}
                                     extraData={this.state}
@@ -106,7 +106,8 @@ export default connect(mapStateToProps,mapDispatchToProps)(Exercise);
      web: {
          margin: 10,
          borderRadius:10,
-         backgroundColor: '#f4f7f9'
+         backgroundColor: '#f4f7f9',
+         height: height * 0.4
 
      },
      buttonContainer: {

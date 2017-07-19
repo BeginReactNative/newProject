@@ -24,6 +24,7 @@ export default class Login extends Component {
 
     handePressSignIn() {
         Alert.alert('Button pressed', 'User sign in');
+        this.props.navigation.navigate('Authorized')
     }
 
     componentDidMount() {
