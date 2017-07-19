@@ -55,6 +55,6 @@ const rootNav = StackNavigator({
          navigationOptions: {
             header: null
         }
-    }
+    },
 });
 export default rootNav;

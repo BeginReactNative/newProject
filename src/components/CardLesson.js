@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text,Dimensions,WebView,TouchableOpacity } from 'react-native';
+import { Icon } from 'native-base';
 import {connect} from 'react-redux';
 import {fetchChildTopicsById} from '../redux/actions/childTopicById';
 import {fetchCardById} from '../redux/actions/cardById';
@@ -30,16 +31,10 @@ class CardLesson extends Component {
         return (
             <TouchableOpacity onPress={() => {this.checkChildType()}}>
             <View style={styles.container}>
-                <View style={styles.headerTitle}>
                     <Text style={styles.textHeader}>{this.props.name}</Text>
-                </View>
-                <View style={styles.description}>
-                    <WebView source={{html: this.props.description}} style={{backgroundColor: '#f4f7f9'}} /> 
-                </View>
-                <View style={styles.action}>
                     <Text>{this.props.childrenIds.length} lessons</Text>
-                    <Text>Last Update: 25/6/2017</Text>
-                </View>
+                    <Icon name='arrow-dropright' />
+                    
             </View>    
             </TouchableOpacity>    
         );
@@ -62,11 +57,12 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const {height} = Dimensions.get('window')
+const {width,height} = Dimensions.get('window')
 const styles = {
     container: {
-        height: height * 0.35,
+        height: height * 0.1,
         margin: 10,
+        padding: 10,    
         borderWidth:1,
         borderRadius: 10,
           shadowColor: '#000000',
@@ -74,20 +70,11 @@ const styles = {
             width: 0,
             height: 3
         },
-      
+        alignItems: 'center',
         shadowRadius: 2,
-        shadowOpacity: 1.0
-    },
-    headerTitle: {
-        flex:1,
-       
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    description: {
-        flex:2,
-       
-        padding: 10
+        shadowOpacity: 1.0,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     action: {
         flex:1,
@@ -98,8 +85,10 @@ const styles = {
         justifyContent: 'space-between'
     },
     textHeader: {
-        fontSize: 22,
-        fontWeight: 'bold'
+        fontSize: 15,
+        fontWeight: 'bold',
+        maxWidth: width * 0.6
+       
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(CardLesson);

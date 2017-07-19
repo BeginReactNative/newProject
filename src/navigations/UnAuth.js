@@ -1,6 +1,8 @@
 import { StackNavigator } from 'react-navigation';
 import Login from '../screens/unauthorized/Login';
-import Signin from '../screens/unauthorized/Signin';
+import Register from '../screens/unauthorized/loginAnimate/pages/Register';
+import LoginAnimate from '../screens/unauthorized/loginAnimate/pages/Login';
+
 
 const UnAuthNav = StackNavigator({
     Login: {
@@ -9,11 +11,18 @@ const UnAuthNav = StackNavigator({
             header: null
         }
     },
-    Signin: {
-        screen: Signin,
+
+    Register: {
+        screen: Register,
          navigationOptions: {
             header: null
         }
-    }
+    },
+    LoginAnimate: {
+        screen: LoginAnimate,
+         navigationOptions: {
+            header: null
+        }
+    },
 })
 export default UnAuthNav;
